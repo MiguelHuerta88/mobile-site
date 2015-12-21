@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
+
+// home route
+Route::get(
+    '/',
+    [
+        'as' => 'site.home',
+        'uses' => 'HomeController@home'
+    ]
+);
