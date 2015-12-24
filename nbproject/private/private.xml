@@ -3,8 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/resources/views/site/footer.blade.php</file>
+            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/resources/views/layouts/master.blade.php</file>
             <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/app/Http/Controllers/HomeController.php</file>
+            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/public/js/bootstrap.min.js</file>
+            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/resources/views/site/navigation_view.blade.php</file>
+            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/resources/views/homepage.blade.php</file>
+            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/public/css/app.css</file>
             <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/app/Http/routes.php</file>
+            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/resources/views/welcome.blade.php</file>
         </group>
     </open-files>
 </project-private>

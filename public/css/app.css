@@ -8299,6 +8299,9 @@ button.close {
     display: none !important;
   }
 }
-.nav-center{
-    margin:0 auto;
+.item-margin{
+    padding-top:5px;
+}
+.content{
+    height:600px;
 }
