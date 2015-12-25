@@ -8303,9 +8303,9 @@ button.close {
     padding-top:5px;
 }
 .content{
-    height:600px;
+    height:700px;
 }
-.main-nav{
+.main-nav, .footer-div{
     background:#222;
 }
 .navigation{
@@ -8313,6 +8313,44 @@ button.close {
     margin: 0 5px;
 }
 .footer{
-    height:50px;
-    border:1px solid red;
+    background: #222;
+    color:#9d9d9d;
+    padding:20px;
+}
+@media screen and (max-width:320px) {
+    .footer-text{
+        font-size: 15px;
+    }
+}
+@media screen and (min-width:321px) {
+    .footer-text{
+        font-size: 20px;
+    }
+}
+.icon-fb, .icon-link, .icon-google, .icon-git{
+    background:url('../images/social.jpg');
+    background-repeat: no-repeat;
+}
+.icon-fb{
+    height:38px;
+    width:39px;
+    background-position: -40px -12px;
+}
+.icon-link{
+    height:38px;
+    width:39px;
+    background-position: -277px -12px;
+}
+.icon-google{
+    height:38px;
+    width:39px;
+    background-position: -182px -11px;
+}
+.icon-git{
+    height:38px;
+    width:39px;
+    background-position: -230px -107px;
+}
+.pad-10{
+    padding:10px;
 }
