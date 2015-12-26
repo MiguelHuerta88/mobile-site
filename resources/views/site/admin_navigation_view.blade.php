@@ -1,14 +1,10 @@
-<div class='container'>
-    <div class="pull-right">
-        <span>Login</span>
-    </div>
-</div>
 <div class="container hidden-xs">
     <a href="{{ URL::route('site.home') }}"><div class="header"></div></a>
 </div>
 <div class="main-nav">
     <div class="container">
         <div class="row">
+            @if(Auth::check())
             <nav class="navbar navbar-inverse navigation">
               <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -33,6 +29,15 @@
                 </div><!-- /.navbar-collapse -->
               </div><!-- /.container-fluid -->
             </nav>
+            @endif
+            <ul class="nav navbar-nav navbar-right">
+                @if(Auth::check())
+                    <li><a class='new-co'>Logout</a></li>
+                @else
+                    <li><a href="{{ URL::route('admin.register')}}">Register</a></li>
+                @endif
+            </ul>
         </div>
     </div>
 </div>
+

@@ -8361,6 +8361,21 @@ button.close {
     background-position: -32px -13px;
     margin-bottom: 3px;
 }
+
+@media screen and (min-width:900px) and (max-width:1200px){
+    .header{
+        background-size: 800px;
+        background-position: -26px 14px;
+    }
+}
+@media screen and (min-width:700px) and (max-width:899px)
+{
+    .header{
+        background-size:550px;
+        background-position: -16px 6px;
+        height:150px;
+    }
+}
 .new-co{
     color:#ce2c27;
 }

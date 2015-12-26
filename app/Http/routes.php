@@ -23,3 +23,12 @@ Route::get(
         'uses' => 'HomeController@home'
     ]
 );
+
+// our register route. should remain hidden only users that know url can get
+Route::get(
+        '/admin-register',
+        [
+            'as' => 'admin.register',
+            'uses' => 'RegisterController@register'
+        ]
+);
