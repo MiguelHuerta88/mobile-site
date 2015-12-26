@@ -4,7 +4,6 @@
 <div class="main-nav">
     <div class="container">
         <div class="row">
-            @if(Auth::check())
             <nav class="navbar navbar-inverse navigation">
               <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -21,22 +20,19 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav nav-justified">
+                    @if(Auth::check())
                     <li class="active item-margin"><a class="new-co" href="#">About <span class="sr-only">(current)</span></a></li>
                     <li class='item-margin'><a class="new-co" href="#">Projects</a></li>
                     <li class='item-margin'><a class='new-co' href="#">Downloads</a></li>
                     <li class='item-margin'><a class='new-co' href="#">Contact</a></li>
+                    <li>{!! Form::open(['url' => 'auth/logout']) !!}<button type='submit' class='new-co btn'>Logout</button>{!! Form::close() !!}</li>
+                    @else
+                    <li><a class='new-co' href="{{ URL::route('admin.register')}}">Register</a></li>
+                    @endif
                   </ul>
                 </div><!-- /.navbar-collapse -->
               </div><!-- /.container-fluid -->
             </nav>
-            @endif
-            <ul class="nav navbar-nav navbar-right">
-                @if(Auth::check())
-                    <li><a class='new-co'>Logout</a></li>
-                @else
-                    <li><a href="{{ URL::route('admin.register')}}">Register</a></li>
-                @endif
-            </ul>
         </div>
     </div>
 </div>

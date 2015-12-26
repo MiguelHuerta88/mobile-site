@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
+use App\Models\User;
+use Auth;
+use URL;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
@@ -30,7 +32,7 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest', ['except' => 'getLogout']);
+        $this->middleware('guest', ['except' => 'logout']);
     }
 
     /**
@@ -43,6 +45,8 @@ class AuthController extends Controller
     {
         return Validator::make($data, [
             'name' => 'required|max:255',
+            'last_name' => 'required|max:255',
+            'username' => 'required|unique,users',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|confirmed|min:6',
         ]);
@@ -61,5 +65,38 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+    
+    /**
+     * login function
+     * 
+     * @return view
+     */
+    public function login()
+    {
+        return view('admin.login');
+    }
+    
+    /**
+     * doLogin
+     * 
+     * @return view
+     */
+    public function doLogin()
+    {
+        dd('we will validate later');
+    }
+    
+    /**
+     * logout function
+     * 
+     * @return view
+     */
+    public function logout()
+    {
+        Auth::logout();
+
+        // redirect them to our home page
+        return redirect()->route('site.home');
     }
 }

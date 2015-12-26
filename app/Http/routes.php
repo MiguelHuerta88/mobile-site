@@ -26,9 +26,49 @@ Route::get(
 
 // our register route. should remain hidden only users that know url can get
 Route::get(
-        '/admin-register',
-        [
-            'as' => 'admin.register',
-            'uses' => 'RegisterController@register'
-        ]
+    '/admin-register',
+    [
+        'as' => 'admin.register',
+        'uses' => 'RegisterController@register'
+    ]
+);
+Route::post(
+    '/admin-register',
+    [
+        'as' => 'admin.register',
+        'uses' => 'RegisterController@doRegister'
+    ]
+);
+
+Route::get(
+    '/admin',
+    [
+        'as' => 'admin.home',
+        'middleware' => 'auth',
+        'uses' => 'AdminController@index'
+    ]
+);
+
+Route::get(
+    'auth/login',
+    [
+        'uses' => 'Auth\AuthController@login',
+        'as' => 'login'
+    ]
+);
+
+Route::post(
+    'auth/login',
+    [
+        'uses' => 'Auth\AuthController@doLogin',
+        'as' => 'login'
+    ]
+);
+
+Route::post(
+    'auth/logout',
+    [
+        'uses' => 'Auth\AuthController@logout',
+        'as' => 'logout'
+    ]
 );
