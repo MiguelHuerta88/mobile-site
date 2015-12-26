@@ -5777,7 +5777,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 
 .navbar-inverse .navbar-brand {
-  color: #9d9d9d;
+  color: #ce2c27;
 }
 
 .navbar-inverse .navbar-brand:hover,
@@ -8314,7 +8314,7 @@ button.close {
 }
 .footer{
     background: #222;
-    color:#9d9d9d;
+    color:#ce2c27;
     padding:20px;
 }
 @media screen and (max-width:320px) {
@@ -8353,4 +8353,14 @@ button.close {
 }
 .pad-10{
     padding:10px;
+}
+.header{
+    background: url('../images/logo.png');
+    background-repeat: no-repeat;
+    height:240px;
+    background-position: -32px -13px;
+    margin-bottom: 3px;
+}
+.new-co{
+    color:#ce2c27;
 }

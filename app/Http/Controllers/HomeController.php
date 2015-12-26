@@ -5,17 +5,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-
-namespace App\Http\Controllers;
 
 class HomeController extends Controller
 {
     /**
      * constructor
      */
-    public function __consstruct()
+    public function __construct()
     {
         // blank for now.
     }
