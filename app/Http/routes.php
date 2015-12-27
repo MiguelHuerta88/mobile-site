@@ -50,6 +50,24 @@ Route::get(
 );
 
 Route::get(
+     'admin/edit/about',
+     [
+         'as' => 'admin.edit-about',
+         'middleware' => 'admin',
+         'uses' => 'AdminController@editAbout'
+     ]
+);
+
+Route::post(
+    'admin/edit/about',
+    [
+        'as' => 'admin.edit-about',
+        'middleware' => 'admin',
+        'uses' => 'AdminController@postEditAbout'
+    ]
+);
+
+Route::get(
     'admin/login',
     [
         'uses' => 'Auth\AuthController@login',

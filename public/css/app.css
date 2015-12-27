@@ -8391,3 +8391,11 @@ button.close {
     text-decoration: none;
     color:#ce2c27;
 }
+.type-title{
+    font-size: 40px;
+    padding:10px;
+    border:1px solid #000;
+}
+.title-row{
+    padding:15px;
+}
