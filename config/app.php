@@ -137,6 +137,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         'Collective\Html\HtmlServiceProvider',
+        Krucas\Notification\NotificationServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -195,8 +196,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
         'Form' => 'Collective\Html\FormFacade',
-        'Html' => 'Collective\Html\HtmlFacade'
-        
+        'Html' => 'Collective\Html\HtmlFacade',
+        'Notification' => Krucas\Notification\Facades\Notification::class,
     ],
 
 ];

@@ -50,7 +50,7 @@ Route::get(
 );
 
 Route::get(
-    'auth/login',
+    'admin/login',
     [
         'uses' => 'Auth\AuthController@login',
         'as' => 'login'
@@ -58,15 +58,15 @@ Route::get(
 );
 
 Route::post(
-    'auth/login',
+    'admin/login',
     [
         'uses' => 'Auth\AuthController@doLogin',
         'as' => 'login'
     ]
 );
 
-Route::post(
-    'auth/logout',
+Route::get(
+    'admin/logout',
     [
         'uses' => 'Auth\AuthController@logout',
         'as' => 'logout'

@@ -1,6 +1,6 @@
 <div class='container'>
     <div class="pull-right">
-        <span>Login</span>
+        <a class="new-co" href="{{ URL::route('login') }}"><span>Login</span></a>
     </div>
 </div>
 <div class="container hidden-xs">

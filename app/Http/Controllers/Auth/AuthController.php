@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Models\User;
+use App\Http\Requests\LoginRequest;
 use Auth;
 use URL;
 use Validator;
@@ -82,9 +83,16 @@ class AuthController extends Controller
      * 
      * @return view
      */
-    public function doLogin()
+    public function doLogin(LoginRequest $request)
     {
-        dd('we will validate later');
+        $input = $request->except('_token');
+        
+        // attempt to login
+        if(Auth::attempt($input)) {
+            return redirect()->route('admin.home');
+        }
+        // redirect them back
+        return redirect()->back()->withInput();
     }
     
     /**

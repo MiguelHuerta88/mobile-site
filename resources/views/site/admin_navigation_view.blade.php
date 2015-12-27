@@ -25,7 +25,7 @@
                     <li class='item-margin'><a class="new-co" href="#">Projects</a></li>
                     <li class='item-margin'><a class='new-co' href="#">Downloads</a></li>
                     <li class='item-margin'><a class='new-co' href="#">Contact</a></li>
-                    <li>{!! Form::open(['url' => 'auth/logout']) !!}<button type='submit' class='new-co btn'>Logout</button>{!! Form::close() !!}</li>
+                    <li><a href="{{ URL::route('logout')}} " class='new-co'>Logout</a></li>
                     @else
                     <li><a class='new-co' href="{{ URL::route('admin.register')}}">Register</a></li>
                     @endif

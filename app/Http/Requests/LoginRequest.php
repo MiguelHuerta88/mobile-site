@@ -12,7 +12,7 @@ use App\Http\Requests\Request;
  * 
  * @author Miguel Huerta <guelme88@gmail.com>
  */
-class RegisterRequest extends Request
+class LoginRequest extends Request
 {
     /**
      * Get the validation rules
@@ -22,11 +22,8 @@ class RegisterRequest extends Request
     public function rules()
     {
         return [
-            'name' => 'required|max:255',
-            'last_name' => 'required|max:255',
-            'username' => 'required|unique:users,username|max:255',
-            'email' => 'required|email|unique:users,email|max:255',
-            'password' => 'required|max:255'
+            'username' => 'required',
+            'password' => 'required'
         ];
     }
     

@@ -3,14 +3,28 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/resources/views/site/footer.blade.php</file>
-            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/resources/views/layouts/master.blade.php</file>
+            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/app/Http/Middleware/Authenticate.php</file>
+            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/app/Http/Requests/LoginRequest.php</file>
             <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/app/Http/Controllers/HomeController.php</file>
-            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/public/js/bootstrap.min.js</file>
-            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/resources/views/site/navigation_view.blade.php</file>
-            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/resources/views/homepage.blade.php</file>
+            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/app/Models/User.php</file>
+            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/config/app.php</file>
+            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/app/Http/Kernel.php</file>
+            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/resources/views/admin/register_view.blade.php</file>
+            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/resources/views/admin/login.blade.php</file>
+            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/app/Http/Controllers/Auth/AuthController.php</file>
+            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/app/Http/Controllers/RegisterController.php</file>
+            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/database/migrations/2014_10_12_000000_create_users_table.php</file>
+            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/app/Http/Middleware/RedirectIfAuthenticated.php</file>
+            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/app/Http/Requests/RegisterRequest.php</file>
+            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/config/auth.php</file>
+            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/composer.json</file>
             <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/public/css/app.css</file>
-            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/resources/views/welcome.blade.php</file>
+            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/app/Http/routes.php</file>
+            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/resources/views/admin/admin_home_view.blade.php</file>
+            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/config/database.php</file>
+            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/app/Http/Controllers/AdminController.php</file>
+            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/resources/views/site/admin_navigation_view.blade.php</file>
+            <file>file:/Users/MiguelHuerta/Desktop/code/mobile-website/app/Http/Controllers/Auth/PasswordController.php</file>
         </group>
     </open-files>
 </project-private>

@@ -9,6 +9,7 @@ use App\Models\User;
 use App\Http\Requests\RegisterRequest;
 use Hash;
 use Auth;
+use Notification;
 
 /**
  * REgister Controller class
@@ -72,8 +73,11 @@ class RegisterController extends Controller
             Auth::login($user);
             
             // show a flash message and then send them to the admin home
+            Notification::success('User '. $request->input('username') . 
+                    ' was created.');
             return redirect()->route('admin.home');
         }
+        Notification::error('User could not be created.');
         return redirect()->back()->withInput();
     }
 }
