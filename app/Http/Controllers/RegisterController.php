@@ -10,6 +10,7 @@ use App\Http\Requests\RegisterRequest;
 use Hash;
 use Auth;
 use Notification;
+use App\Models\Social;
 
 /**
  * REgister Controller class
@@ -30,7 +31,11 @@ class RegisterController extends Controller
      * 
      * @param UserModel
      */
-    public function __construct(User $userModel) {
+    public function __construct(
+        User $userModel,
+        Social $socialModel
+    ) {
+        parent::__construct($socialModel);
         $this->userModel = $userModel;
     }
     

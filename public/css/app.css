@@ -8382,3 +8382,12 @@ button.close {
 .error{
     border: 1px solid red;
 }
+.icon-envelope, .icon-phone
+{
+    padding:5px;
+}
+.icon-phone a, .icon-phone a hover, .icon-envelope a, .icon-envelope a hover
+{
+    text-decoration: none;
+    color:#ce2c27;
+}

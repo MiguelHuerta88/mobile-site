@@ -5,13 +5,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Social;
+
 class AdminController extends \App\Http\Controllers\Controller
 {
     /**
      * construct
      */
-    public function __construct() {
-        // leave blank
+    public function __construct(Social $socialModel) {
+        parent::__construct($socialModel);
     }
     
     /**

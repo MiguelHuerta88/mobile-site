@@ -1,6 +1,10 @@
 <div class='container'>
     <div class="pull-right">
-        <a class="new-co" href="{{ URL::route('login') }}"><span>Login</span></a>
+        @if(Auth::check())
+            <a class="new-co" href="{{ URL::route('logout') }}"><span>Logout</span></a>
+        @else
+            <a class="new-co" href="{{ URL::route('login') }}"><span>Login</span></a>
+        @endif
     </div>
 </div>
 <div class="container hidden-xs">
@@ -28,7 +32,7 @@
                     <li class="active item-margin"><a class="new-co" href="#">About <span class="sr-only">(current)</span></a></li>
                     <li class='item-margin'><a class="new-co" href="#">Projects</a></li>
                     <li class='item-margin'><a class='new-co' href="#">Downloads</a></li>
-                    <li class='item-margin'><a class='new-co' href="#">Contact</a></li>
+                    {{--<li class='item-margin'><a class='new-co' href="#">Contact</a></li>--}}
                   </ul>
                 </div><!-- /.navbar-collapse -->
               </div><!-- /.container-fluid -->

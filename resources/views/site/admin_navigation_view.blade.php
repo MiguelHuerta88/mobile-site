@@ -21,13 +21,11 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav nav-justified">
                     @if(Auth::check())
-                    <li class="active item-margin"><a class="new-co" href="#">About <span class="sr-only">(current)</span></a></li>
-                    <li class='item-margin'><a class="new-co" href="#">Projects</a></li>
-                    <li class='item-margin'><a class='new-co' href="#">Downloads</a></li>
-                    <li class='item-margin'><a class='new-co' href="#">Contact</a></li>
+                    <li class="active item-margin"><a class="new-co" href="#">Edit About <span class="sr-only">(current)</span></a></li>
+                    <li class='item-margin'><a class="new-co" href="#">Edit Projects</a></li>
+                    <li class='item-margin'><a class='new-co' href="#">Edit Downloads</a></li>
+                    {{--<li class='item-margin'><a class='new-co' href="#">Contact</a></li>--}}
                     <li><a href="{{ URL::route('logout')}} " class='new-co'>Logout</a></li>
-                    @else
-                    <li><a class='new-co' href="{{ URL::route('admin.register')}}">Register</a></li>
                     @endif
                   </ul>
                 </div><!-- /.navbar-collapse -->

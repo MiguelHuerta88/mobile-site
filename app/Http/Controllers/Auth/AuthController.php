@@ -6,6 +6,8 @@ use App\Models\User;
 use App\Http\Requests\LoginRequest;
 use Auth;
 use URL;
+use Notification;
+use App\Models\Social;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
@@ -31,8 +33,9 @@ class AuthController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Social $socialModel)
     {
+        parent::__construct($socialModel);
         $this->middleware('guest', ['except' => 'logout']);
     }
 
@@ -92,6 +95,7 @@ class AuthController extends Controller
             return redirect()->route('admin.home');
         }
         // redirect them back
+        Notification::error('User not found.');
         return redirect()->back()->withInput();
     }
     

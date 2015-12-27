@@ -8,17 +8,18 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Social;
 
 class HomeController extends Controller
-{
+{   
     /**
-     * constructor
+     * construct
      */
-    public function __construct()
-    {
-        // blank for now.
+    public function __construct(Social $socialModel) {
+        parent::__construct($socialModel);
     }
-    
+
+
     /**
      * home function
      */

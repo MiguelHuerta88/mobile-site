@@ -44,7 +44,7 @@ Route::get(
     '/admin',
     [
         'as' => 'admin.home',
-        'middleware' => 'auth',
+        'middleware' => 'admin',
         'uses' => 'AdminController@index'
     ]
 );
