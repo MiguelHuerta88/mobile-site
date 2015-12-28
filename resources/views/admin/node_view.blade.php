@@ -44,16 +44,18 @@
 </div>
 @endsection
 
-<!-- Modal -->
+<!-- Modal Most of it is empty because we will fill it in using JS -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Current Changes</h4>
+        <h4 class="modal-title" id="myModalLabel">Page Edits</h4>
       </div>
       <div class="modal-body">
-          <p class='content-body'>
+          <h3 id="page-title"></h3>
+          <span id="page-type"></span>
+          <p id='content-body'>
               
           </p>
       </div>
