@@ -21,6 +21,14 @@
                 columns in the database table editable so you can create new content or update
                 any content.
             </p>
+            
+            <p>
+                When editing pages if you want to include styling to sections make sure
+                to include style tags. For example
+                <code>
+                    style='font-weight: bold'
+                </code>
+            </p>
         </div>
     </div>
 </div>

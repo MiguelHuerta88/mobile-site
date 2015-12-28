@@ -24,6 +24,14 @@ Route::get(
     ]
 );
 
+Route::get(
+    '/{type}',
+    [
+        'as' => 'site.page',
+        'uses' => 'PageController@view'
+    ]
+)->where('type', '(about|project|download)');
+
 // our register route. should remain hidden only users that know url can get
 Route::get(
     '/admin-register',
@@ -50,20 +58,20 @@ Route::get(
 );
 
 Route::get(
-     'admin/edit/about',
+     'admin/edit/{type}',
      [
-         'as' => 'admin.edit-about',
+         'as' => 'admin.edit',
          'middleware' => 'admin',
-         'uses' => 'AdminController@editAbout'
+         'uses' => 'AdminController@edit'
      ]
 );
 
 Route::post(
-    'admin/edit/about',
+    'admin/edit/submit',
     [
-        'as' => 'admin.edit-about',
+        'as' => 'admin.submit',
         'middleware' => 'admin',
-        'uses' => 'AdminController@postEditAbout'
+        'uses' => 'AdminController@postEdit'
     ]
 );
 

@@ -9,6 +9,7 @@ use App\Models\Social;
 use App\Models\Node;
 use App\Models\NodeType;
 use App\Http\Requests\NodeFormRequest;
+use Notification;
 
 class AdminController extends \App\Http\Controllers\Controller
 {
@@ -54,16 +55,15 @@ class AdminController extends \App\Http\Controllers\Controller
      * 
      * @return view
      */
-    public function editAbout($type = 'about')
+    public function edit($type = 'about')
     {
         // we should gather any information from the tables and then send that
         // back to the view. We order by id desc because we can create new
         // type pages or edit
         $node = $this->nodeModel->nodeByType($type)->orderBy('id', 'desc')->first();
-        $nodeType = $node ? $node->nodeType : null;
         // return view
  
-        return view('admin.node_view')->with(compact('node', 'nodeType'));
+        return view('admin.node_view')->with(compact('node'));
     }
     
     /**
@@ -72,7 +72,7 @@ class AdminController extends \App\Http\Controllers\Controller
      * @param NodeFormRequest $request
      * @return view
      */
-    public function postEditAbout(NodeFormRequest $request)
+    public function postEdit(NodeFormRequest $request)
     {   
         // first we save the node model
         $node = $this->nodeModel->find($request->input('id'));
@@ -93,8 +93,9 @@ class AdminController extends \App\Http\Controllers\Controller
             
             $this->nodeTypeModel->create($request->input());
         }
-        
-        return redirect()->route('admin.edit-about');
+        // we will flash a notification
+        Notification::success($request->input('type') . ' page has been updated');
+        return redirect()->route('admin.home');
     }
 }
 

@@ -1,7 +1,9 @@
 <div class='container'>
     <div class="pull-right">
         @if(Auth::check())
-            <a class="new-co" href="{{ URL::route('logout') }}"><span>Logout</span></a>
+        <a class="new-co" href="{{ URL::route('logout') }}"><span>Logout</span></a>
+        &VerticalLine;
+        <a class='new-co' href='{{ URL::route('admin.home') }}'><span>Admin</span></a>
         @else
             <a class="new-co" href="{{ URL::route('login') }}"><span>Login</span></a>
         @endif
@@ -29,9 +31,9 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav nav-justified">
-                    <li class="active item-margin"><a class="new-co" href="#">About <span class="sr-only">(current)</span></a></li>
-                    <li class='item-margin'><a class="new-co" href="#">Projects</a></li>
-                    <li class='item-margin'><a class='new-co' href="#">Downloads</a></li>
+                    <li class="active item-margin"><a class="new-co" href="{{ URL::route('site.page', ['type' => 'about']) }}">About <span class="sr-only">(current)</span></a></li>
+                    <li class='item-margin'><a class="new-co" href="{{ URL::route('site.page', ['type' => 'project']) }}">Projects</a></li>
+                    <li class='item-margin'><a class='new-co' href="{{ URL::route('site.page', ['type' => 'download']) }}">Downloads</a></li>
                     {{--<li class='item-margin'><a class='new-co' href="#">Contact</a></li>--}}
                   </ul>
                 </div><!-- /.navbar-collapse -->

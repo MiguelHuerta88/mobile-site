@@ -21,9 +21,9 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav nav-justified">
                     @if(Auth::check())
-                    <li class="active item-margin"><a class="new-co" href="{{ URL::route('admin.edit-about') }}">Edit About <span class="sr-only">(current)</span></a></li>
-                    <li class='item-margin'><a class="new-co" href="#">Edit Projects</a></li>
-                    <li class='item-margin'><a class='new-co' href="#">Edit Downloads</a></li>
+                    <li class="active item-margin"><a class="new-co" href="{{ URL::route('admin.edit', ['type' => 'about']) }}">Edit About <span class="sr-only">(current)</span></a></li>
+                    <li class='item-margin'><a class="new-co" href="{{ URL::route('admin.edit', ['type' => 'project']) }}">Edit Projects</a></li>
+                    <li class='item-margin'><a class='new-co' href="{{ URL::route('admin.edit', ['type' => 'download']) }}">Edit Downloads</a></li>
                     {{--<li class='item-margin'><a class='new-co' href="#">Contact</a></li>--}}
                     <li><a href="{{ URL::route('logout')}} " class='new-co'>Logout</a></li>
                     @endif

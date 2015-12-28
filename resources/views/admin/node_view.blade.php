@@ -6,10 +6,10 @@
         <span class='type-title'>{{ $node->title }}</span>
     </div>
     
-    {!! Form::open() !!}
+    {!! Form::open(['url' => '/admin/edit/submit']) !!}
     <div class='row'>
         <div class='form-group col-lg-5'>
-            {!! Form::label('type', 'Type(about|project|download)') !!}
+            {!! Form::label('type', 'Type (about | project | download)') !!}
             <input type='text' name='type' class="form-control {{ $errors->has('type') ? 'error' : '' }}" value='{{ Input::old('type', (isset($node->type)) ? $node->type : '') }}'>
             @if($errors->has('type'))
                 <span class="help-block">{{ $errors->first('type') }}</span>@endif
@@ -24,10 +24,10 @@
         </div>
     </div>
     <div class='row'>
-        <div class='form-group col-lg-8'>
+        <div class='form-group col-lg-8'>      
             {!!  Form::label('body', 'Body') !!}
             <textarea rows="10" name="body" class="form-control {{ $errors->has('body') ? 'error' : '' }}">
-                {!! Input::old('body', (isset($nodeType->body)) ? $nodeType->body : '') !!}
+                {!! Input::old('body', (isset($node->nodeType->body)) ? $node->nodeType->body : '') !!}
             </textarea>
             @if($errors->has('body'))
             <span class='help-block'>{{ $errors->first('body') }}</span>@endif
