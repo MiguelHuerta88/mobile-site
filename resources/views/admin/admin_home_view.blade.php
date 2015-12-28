@@ -29,6 +29,12 @@
                     style='font-weight: bold'
                 </code>
             </p>
+            
+            <p>
+                A few things to consider, when we output the body sections of the pages we use laravels
+                <code>nl2br</code> function. So if creating tables like we have in the
+                downloads page. Make sure to not create the tables with each tr or td on a newline.
+            </p>
         </div>
     </div>
 </div>
