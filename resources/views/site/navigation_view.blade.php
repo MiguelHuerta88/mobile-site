@@ -31,7 +31,8 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav nav-justified">
-                    <li class="active item-margin"><a class="new-co" href="{{ URL::route('site.page', ['type' => 'about']) }}">About <span class="sr-only">(current)</span></a></li>
+                      <li class='active item-margin'><a class="new-co" href="{{ URL::route('site.home') }}">Home</a></li>
+                    <li class="item-margin"><a class="new-co" href="{{ URL::route('site.page', ['type' => 'about']) }}">About <span class="sr-only">(current)</span></a></li>
                     <li class='item-margin'><a class="new-co" href="{{ URL::route('site.page', ['type' => 'project']) }}">Projects</a></li>
                     <li class='item-margin'><a class='new-co' href="{{ URL::route('site.page', ['type' => 'download']) }}">Downloads</a></li>
                     {{--<li class='item-margin'><a class='new-co' href="#">Contact</a></li>--}}
