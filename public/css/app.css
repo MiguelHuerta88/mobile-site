@@ -8403,3 +8403,21 @@ button.close {
     font-size:10px;
     margin: 10px;
 }
+.home-img{
+    background: url("../images/image1.JPG");
+    background-repeat: no-repeat;
+    height:400px;
+    background-size: 100% 100%;
+}
+.img-title{
+    color:#ce2c27;
+    font-size: 40px;
+    width:100%;
+    text-align: center;
+    font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; 
+}
+.img-by{
+    font-size: 20px;
+    padding:10px;
+    font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; 
+}
