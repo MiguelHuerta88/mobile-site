@@ -8421,3 +8421,7 @@ button.close {
     color:#ce2c27;
     font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; 
 }
+.main-nav .item-margin .new-co:hover{
+    background: #ce2c27;
+    color:#ffffff;
+}
