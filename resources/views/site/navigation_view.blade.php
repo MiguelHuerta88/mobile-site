@@ -1,5 +1,5 @@
 <div class='container'>
-    <div class="pull-right">
+    <div class="pull-right hidden-xs">
         @if(Auth::check())
         <a class="new-co" href="{{ URL::route('logout') }}"><span>Logout</span></a>
         &VerticalLine;
@@ -35,6 +35,11 @@
                     <li class="item-margin"><a class="new-co" href="{{ URL::route('site.page', ['type' => 'about']) }}">About <span class="sr-only">(current)</span></a></li>
                     <li class='item-margin'><a class="new-co" href="{{ URL::route('site.page', ['type' => 'project']) }}">Projects</a></li>
                     <li class='item-margin'><a class='new-co' href="{{ URL::route('site.page', ['type' => 'download']) }}">Downloads</a></li>
+                    @if(Auth::check())
+                        <li class='item-margin hidden-lg hidden-md hidden-sm'><a class='new-co' href="{{ URL::route('logout') }}">Logout</a></li>
+                    @else
+                        <li class='item-margin hidden-lg hidden-md hidden-sm'><a class='new-co' href="{{ URL::route('login') }}">Login</a></li>
+                    @endif
                     {{--<li class='item-margin'><a class='new-co' href="#">Contact</a></li>--}}
                   </ul>
                 </div><!-- /.navbar-collapse -->
