@@ -8,15 +8,23 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Node;
 use App\Models\Social;
 
 class HomeController extends Controller
-{   
+{
+    /**
+     * @var Node Model
+     */
+    public $node;
+
     /**
      * construct
      */
-    public function __construct(Social $socialModel) {
+    public function __construct(Social $socialModel, Node $node) {
         parent::__construct($socialModel);
+
+        $this->node = $node;
     }
 
 
@@ -25,7 +33,10 @@ class HomeController extends Controller
      */
     public function home()
     {
-        return view('homepage'); 
+        // this is now a bit more complex. We have to also pull the page section
+        $sections = $this->node->all();
+
+        return view('homepage')->with('sections', $sections);
     }
 }
 

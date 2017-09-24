@@ -1,0 +1,26 @@
+.header{
+    min-width: 100%;
+    background: #324554;
+    height: 270px;
+}
+.background{
+    background: url("/images/ban_img.jpg");
+    /*background-repeat: no-repeat;*/
+    height: 270px;
+    width: 100%;
+    position: relative;
+}
+.background .name{
+    font-family: "Nunito";
+    color: #fff;
+    background: #544132;
+    width: 300px;
+    text-align: center;
+    font-size: 30px;
+}
+.ad-slot-728-90{
+    background: lightblue;
+    height: 90px;
+    width: 728px;
+    margin: 0 auto;
+}
