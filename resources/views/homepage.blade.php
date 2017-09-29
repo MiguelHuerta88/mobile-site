@@ -4,9 +4,9 @@
 <div class='container'>
     <!-- Show the content -->
     @foreach($sections as $index => $section)
-        <section>
-            {{ $section->title }}
-            <div style="border:1px solid red;">
+        <section class="section">
+            <div class="section-title">{{ $section->title }}</div>
+            <div class="section-content">
                 {!! nl2br($section->nodeType->body) !!}
             </div>
         </section>

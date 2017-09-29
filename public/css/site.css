@@ -24,3 +24,24 @@
     width: 728px;
     margin: 0 auto;
 }
+
+section.section{
+    margin: 0 0 20px 0;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px 0 rgba(0, 0, 0, 0.12);
+}
+    .section .section-title{
+        background: #544132;
+        padding: 8px 5px;
+        color: #fff;
+        font-weight: 800;
+        font-family: "Nunito";
+        font-size: 20px;
+    }
+    .section .section-content{
+        margin: 5px;
+        font-family: "Nunito";
+    }
