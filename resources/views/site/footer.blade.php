@@ -1,3 +1,4 @@
+<div class="ad-slot-728-90">FOOTER AD SLOT</div>
 <div class="footer-div">
     <div class='container footer'>
         <div class='row col-lg-offset-10 col-md-offset-9 col-sm-offset-8 col-xs-offset-3'>
