@@ -5,16 +5,17 @@
     padding: 15px 10px 30px 10px;
 }
 .main-nav, .footer-div{
-    background:#222;
+    background: #324554;
 }
 .navigation{
     border:none;
     margin: 0 5px;
 }
 .footer{
-    background: #222;
-    color:#ce2c27;
+    background: #324554;
+    color:#fff;
     padding:20px;
+    font-family: "Nunito";
 }
 @media screen and (max-width:320px) {
     .footer-text{
@@ -26,9 +27,15 @@
         font-size: 20px;
     }
 }
+.icons a:not(:last-child){
+    margin: 0 10px 0 0;
+}
 .icon-fb, .icon-link, .icon-google, .icon-git{
     background:url('../images/social.jpg');
     background-repeat: no-repeat;
+    -webkit-border-radius: 49%;
+    -moz-border-radius: 49%;
+    border-radius: 49%;
 }
 .icon-fb{
     height:38px;
@@ -85,10 +92,11 @@
 {
     padding:5px;
 }
-.icon-phone a, .icon-phone a hover, .icon-envelope a, .icon-envelope a hover
+.icon-phone a, .icon-envelope a
 {
     text-decoration: none;
-    color:#ce2c27;
+    color:#fff;
+    font-family: "Nunito";
 }
 .type-title{
     font-size: 40px;
@@ -196,7 +204,6 @@ section.section{
         left: 0;
         padding: 5px;
         background: #fff;
-        //opacity: 0.9;
         color: #000;
         font-family: "Nunito";
         font-weight: 800;
@@ -204,4 +211,14 @@ section.section{
     }
     .section-content .read-less{
         position: relative;
+    }
+    .section-content .portrait{
+        background: url("/images/miguel.jpg");
+        height: 165px;
+        width: 150px;
+        object-fit: cover;
+        background-repeat: no-repeat;
+        border-radius: 10%;
+        margin: 0 auto;
+
     }

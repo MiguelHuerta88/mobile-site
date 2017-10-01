@@ -32,7 +32,7 @@ var readMore = {
                 // pull height of element
 
                 // fix this
-                var height = $(el).parent().height();
+                var height = $(el).parent().innerHeight();
                 $(el).data('height', height);
 
                 // if the height is more than 300 we have to add some css
@@ -58,10 +58,9 @@ var readMore = {
         }
     },
     minimize: function(el){
-        console.log(readMore.options.height);
-        $(el).animate({'max-height': readMore.options.height}, "slow", function(){
-            $(el).css("overflow", "hidden").css("min-height", readMore.options.height);
-        });
+        $(el).css("overflow", "hidden").css("min-height", readMore.options.height);
+
+        $(el).animate({'max-height': readMore.options.height}, "slow");
 
         // swap text
         // swap the text & remove class
