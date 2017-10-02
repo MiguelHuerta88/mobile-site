@@ -5,3 +5,4 @@
     </div>
 </header>
 <div class="ad-slot-728-90">AD SLOT</div>
+<div class="ad-slot-320-50">MOBILE AD SLOT</div>

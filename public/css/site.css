@@ -132,10 +132,14 @@
     background: #ce2c27;
     color:#ffffff;
 }
+.container a{
+    text-decoration: none;
+}
 .header{
     min-width: 100%;
     background: #324554;
     height: 270px;
+    font-family: "Nunito";
 }
 .background{
     background: url("/images/ban_img.jpg");
@@ -162,12 +166,31 @@
     background: lightblue;
     height: 90px;
     width: 728px;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
     display: none;
 }
 
+.ad-slot-320-50{
+    background: pink;
+    min-height: 50px;
+    width: 320px;
+    margin: 0 auto;
+    display:none;
+}
+.ad-slot-320-250{
+    background: limegreen;
+    min-height: 250px;
+    width: 300px;
+    margin: 0 auto 20px auto;
+    display: none;
+}
 @media screen and (min-width: 750px){
     .ad-slot-728-90{
+        display: block;
+    }
+}
+@media screen and (max-width: 700px){
+    .ad-slot-320-50, .ad-slot-320-250{
         display: block;
     }
 }

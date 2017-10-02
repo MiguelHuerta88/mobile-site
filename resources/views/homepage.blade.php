@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Welcome to Miguelhuerta.co.nf')
+@section('title', 'Welcome to ProjectsByMiguel')
 
 @section('gpt_tags')
 {{-- This section need to determined which ads to show --}}
@@ -28,6 +28,7 @@
             <!-- Ad Slot HERE -->
             <div class="slot-holder">
                 <div class="ad-slot-728-90">MID SLOT</div>
+                <div class="ad-slot-320-50">MOBILE MID SLOT</div>
             </div>
         @endif
     @endforeach

@@ -1,5 +1,7 @@
 <div class="container hidden-xs">
-    <a href="{{ URL::route('site.home') }}"><div class="header"></div></a>
+    <a href="{{ URL::route('site.home') }}"><div class="header"><div class="background">
+                <div class="name">Projects by Miguel</div>
+            </div></div></a>
 </div>
 <div class="main-nav">
     <div class="container">
