@@ -24,6 +24,7 @@
     rsync -v -az --no-o --no-g --no-p --delete \
         --exclude ".env" \
         --exclude "/storage" \
+        --exclude ".htaccess" \
         /home/projec64/deploy/ \
         /home/projec64/public_html
     echo 'Running Artisan commands'
