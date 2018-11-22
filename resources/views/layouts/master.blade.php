@@ -11,6 +11,14 @@
         <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
 
+        {{-- gpt code --}}
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-4045826312263124",
+            enable_page_level_ads: true
+          });
+        </script>
         @yield('gpt_tags')
     </head>
     <body>
