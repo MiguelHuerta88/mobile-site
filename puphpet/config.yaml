@@ -26,7 +26,7 @@ vagrantfile:
                             private_network: 192.168.56.10
                             forwarded_port:
                                 port1:
-                                    host: '5585'
+                                    host: '9292'
                                     guest: '22'
                         memory: '1024'
                         cpus: '1'
@@ -44,7 +44,7 @@ vagrantfile:
                 owner: www-data
                 group: www-data
                 source: ./
-                target: /var/www/sites/
+                target: /var/www/sites
                 sync_type: nfs
                 smb:
                     smb_host: ''
@@ -90,9 +90,11 @@ server:
         - bash-completion
         - htop
         - vim
-        - curl
-        - libcurl4-gnutls-dev
-        - libxml2-dev
+        - php7.1-xml
+        - php7.1-mcrypt
+        - libc-dev
+        - php7.1-common
+        - libmcrypt-dev
 users_groups:
     install: '1'
     groups: {  }
@@ -214,7 +216,7 @@ apache:
                     provider: filesmatch
                     path: \.php$
                     sethandler: 'proxy:fcgi://127.0.0.1:9000'
-        vhost_8bg:
+        vhost_620:
             servername: loc.mobile.com
             docroot: /var/www/sites/public
             port: '443'
@@ -228,7 +230,7 @@ apache:
             ssl_protocol: ''
             ssl_cipher: ''
             directories:
-                php_html_LLL:
+                php_html_XPT:
                     provider: directory
                     path: /var/www/sites/public
                     directoryindex: 'index.php index.html'
@@ -240,7 +242,7 @@ apache:
                         - All
                     require:
                         - 'all granted'
-                php_php_LLL:
+                php_php_XPT:
                     provider: filesmatch
                     path: \.php$
                     sethandler: 'proxy:fcgi://127.0.0.1:9000'
@@ -253,7 +255,7 @@ letsencrypt:
 php:
     install: '1'
     settings:
-        version: '5.6'
+        version: '7.1'
     modules:
         php:
             - cli
@@ -261,7 +263,8 @@ php:
             - xml
             - mbstring
             - curl
-            - mcrypt
+            - gmp
+            - zip
         pear: {  }
         pecl: {  }
     ini:
