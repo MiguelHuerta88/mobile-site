@@ -28,8 +28,6 @@
         /home/projec64/public_html
     echo 'Running Artisan commands'
     php artisan migrate --force
-    php artisan cache:clear
-    php artisan config:clear
     php artisan up
 
 @endtask
