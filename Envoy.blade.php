@@ -1,4 +1,4 @@
-@servers(['production' => ' projec64@az1-ss13.a2hosting.com'])
+@servers(['production' => ' projec64@az1-ss13.a2hosting.com -p 7822'])
 
 {{-- deploy task --}}
 @task('deploy', ['on' => 'production'])
@@ -15,8 +15,6 @@
     fi
     echo 'rsync command starting'
     rsync -v -az --no-o --no-g --no-p --delete \
-        --rsync-path="rsync" \
-        -e "ssh -p 7822" \
         --exclude ".env" \
         --exclude "/storage" \
         /home/projec64/deploy/ \
