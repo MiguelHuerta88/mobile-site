@@ -1,0 +1,24 @@
+READ ME
+
+Instructions to Deploy:
+
+1) sync over all files in mobile-site using Cyberduck to hosting server at /home/projec64/sync
+2) ssh into server and run rsync to copy over file
+3) run npm commands and composer on deploy directory
+4) copy over all contents in deploy to html_plublic/
+
+
+example rsync call
+
+rsync -v -az --no-o --no-g --no-p --delete \
+    --rsync-path="rsync" \
+    -e "ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null" \
+    --exclude "deploy.sh" \
+    --exclude ".idea/" \
+    --exclude ".vagrant/" \
+    --exclude ".env" \
+    --exclude "puphpet/" \
+    --exclude "vendor/" \
+    ./ \
+    jenkins@$static_server:/var/www/deploy-int
+ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null \
