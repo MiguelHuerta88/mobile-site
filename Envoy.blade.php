@@ -1,4 +1,4 @@
-@servers(['production' => 'az1-ss13.a2hosting.com'])
+@servers(['production' => ' projec64@az1-ss13.a2hosting.com'])
 
 {{-- deploy task --}}
 @task('deploy', ['on' => 'production'])
