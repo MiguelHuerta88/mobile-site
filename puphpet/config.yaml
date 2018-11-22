@@ -325,10 +325,11 @@ python:
     packages: {  }
     versions: {  }
 nodejs:
-    install: '0'
+    install: '1'
     settings:
         version: '6'
-    npm_packages: {  }
+    npm_packages:
+        - gulp
 mariadb:
     install: '0'
     settings:
