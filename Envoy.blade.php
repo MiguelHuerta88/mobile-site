@@ -25,6 +25,7 @@
         --exclude ".env" \
         --exclude "/storage" \
         --exclude ".htaccess" \
+        --exclude "/api" \
         /home/projec64/deploy/ \
         /home/projec64/public_html
     echo 'Running Artisan commands'
