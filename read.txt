@@ -27,8 +27,13 @@ rsync -v -az --no-o --no-g --no-p --delete \
     --exclude "puphpet/" \
     --exclude "vendor/" \
     ./ \
-    projec64@az1-ss13.a2hosting.com:/home/projec64/sync
+    projec64@az1-ss13.a2hosting.com:/home/projec64/deploy
 
 2) copy over everything in /sync/ to /deploy/
 2) run gulp composer commands along with other artisan commands to prepare
-3) copy over everything in /
+    npm install
+    gulp --production --all
+    composer install
+
+3) copy over everything in /deploy to /public_html
+4) remove everything inside /deploy/*
