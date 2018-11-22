@@ -3,3 +3,10 @@
 Homestead.yaml
 Homestead.json
 .env
+/.vagrant
+/puphpet/config-custom.yaml
+/.idea/
+/_ide_helper.php
+/.phpstorm.meta.php
+.DS_Store
+node_types.sql

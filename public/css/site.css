@@ -1,0 +1,247 @@
+.item-margin{
+    padding-top:5px;
+}
+.content{
+    padding: 15px 10px 30px 10px;
+}
+.main-nav, .footer-div{
+    background: #324554;
+}
+.navigation{
+    border:none;
+    margin: 0 5px;
+}
+.footer{
+    background: #324554;
+    color:#fff;
+    padding:20px;
+    font-family: "Nunito";
+}
+@media screen and (max-width:320px) {
+    .footer-text{
+        font-size: 15px;
+    }
+}
+@media screen and (min-width:321px) {
+    .footer-text{
+        font-size: 20px;
+    }
+}
+.icons a:not(:last-child){
+    margin: 0 10px 0 0;
+}
+.icon-fb, .icon-link, .icon-google, .icon-git{
+    background:url('../images/social.jpg');
+    background-repeat: no-repeat;
+    -webkit-border-radius: 49%;
+    -moz-border-radius: 49%;
+    border-radius: 49%;
+}
+.icon-fb{
+    height:38px;
+    width:39px;
+    background-position: -40px -12px;
+}
+.icon-link{
+    height:38px;
+    width:39px;
+    background-position: -277px -12px;
+}
+.icon-google{
+    height:38px;
+    width:39px;
+    background-position: -182px -11px;
+}
+.icon-git{
+    height:38px;
+    width:39px;
+    background-position: -230px -107px;
+}
+.pad-10{
+    padding:10px;
+}
+.header{
+    background: url('../images/logo.png');
+    background-repeat: no-repeat;
+    height:240px;
+    background-position: -32px -13px;
+    margin-bottom: 3px;
+}
+
+@media screen and (min-width:900px) and (max-width:1200px){
+    .header{
+        background-size: 800px;
+        background-position: -26px 14px;
+    }
+}
+@media screen and (min-width:700px) and (max-width:899px)
+{
+    .header{
+        background-size:550px;
+        background-position: -16px 6px;
+        height:150px;
+    }
+}
+.new-co{
+    color:#ce2c27;
+}
+.error{
+    border: 1px solid red;
+}
+.icon-envelope, .icon-phone
+{
+    padding:5px;
+}
+.icon-phone a, .icon-envelope a
+{
+    text-decoration: none;
+    color:#fff;
+    font-family: "Nunito";
+}
+.type-title{
+    font-size: 40px;
+    padding:10px;
+    color:#ce2c27;
+}
+.title-row{
+    padding:15px;
+}
+.span-type{
+    font-size:10px;
+    margin: 10px;
+}
+.home-img{
+    background: url("../images/image1.JPG");
+    background-repeat: no-repeat;
+    height:400px;
+    background-size: 100% 100%;
+}
+.img-title{
+    color:#ce2c27;
+    font-size: 40px;
+    width:100%;
+    text-align: center;
+    font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif;
+}
+.img-by{
+    font-size: 20px;
+    color:#ce2c27;
+    font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif;
+}
+.main-nav .item-margin .new-co:hover{
+    background: #ce2c27;
+    color:#ffffff;
+}
+.container a{
+    text-decoration: none;
+}
+.header{
+    min-width: 100%;
+    background: #324554;
+    height: 270px;
+    font-family: "Nunito";
+}
+.background{
+    background: url("/images/ban_img.jpg");
+    /*background-repeat: no-repeat;*/
+    height: 270px;
+    width: 100%;
+    position: relative;
+}
+.background .name{
+    font-family: "Nunito";
+    color: #fff;
+    background: #544132;
+    width: 300px;
+    text-align: center;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 420px){
+    .background .name{
+        width: 100%;
+    }
+}
+.ad-slot-728-90{
+    background: lightblue;
+    height: 90px;
+    width: 728px;
+    margin: 0 auto 20px auto;
+    display: none;
+}
+
+.ad-slot-320-50{
+    background: pink;
+    min-height: 50px;
+    width: 320px;
+    margin: 0 auto;
+    display:none;
+}
+.ad-slot-320-250{
+    background: limegreen;
+    min-height: 250px;
+    width: 300px;
+    margin: 0 auto 20px auto;
+    display: none;
+}
+@media screen and (min-width: 750px){
+    .ad-slot-728-90{
+        display: block;
+    }
+}
+@media screen and (max-width: 700px){
+    .ad-slot-320-50, .ad-slot-320-250{
+        display: block;
+    }
+}
+.slot-holder{
+    margin: 0 0 20px 0;
+}
+section.section{
+    margin: 0 0 20px 0;
+    position: relative;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px 0 rgba(0, 0, 0, 0.12);
+}
+    .section .section-title{
+        background: #544132;
+        padding: 8px 5px;
+        color: #fff;
+        font-weight: 800;
+        font-family: "Nunito";
+        font-size: 20px;
+    }
+    .section .section-content{
+        position: relative;
+        padding: 10px;
+        font-family: "Nunito";
+    }
+    .section .section-content .read, .section-content .read-less{
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 5px;
+        background: #fff;
+        color: #000;
+        font-family: "Nunito";
+        font-weight: 800;
+        cursor: pointer;
+    }
+    .section-content .read-less{
+        position: relative;
+    }
+    .section-content .portrait{
+        background: url("/images/miguel.jpg");
+        height: 165px;
+        width: 150px;
+        object-fit: cover;
+        background-repeat: no-repeat;
+        border-radius: 10%;
+        margin: 0 auto;
+
+    }

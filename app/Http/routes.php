@@ -24,13 +24,14 @@ Route::get(
     ]
 );
 
-Route::get(
+// THIS ROUTE NO LONGER NEEDED. WE ARE MOVING TO A SINGLE PAGE DESIGN
+/*Route::get(
     '/{type}',
     [
         'as' => 'site.page',
         'uses' => 'PageController@view'
     ]
-)->where('type', '(about|project|download)');
+)->where('type', '(about|project|download)');*/
 
 // our register route. should remain hidden only users that know url can get
 Route::get(

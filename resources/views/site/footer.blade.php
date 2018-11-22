@@ -1,6 +1,8 @@
+<div class="ad-slot-728-90">FOOTER AD SLOT</div>
+<div class="ad-slot-320-250">MOBILE FOOTER SLOT</div>
 <div class="footer-div">
     <div class='container footer'>
-        <div class='row col-lg-offset-10 col-md-offset-9 col-sm-offset-8 col-xs-offset-3'>
+        <div class='row col-lg-offset-10 col-md-offset-9 col-sm-offset-8 col-xs-offset-3 icons'>
             {{--<a href="#" class="pull-left"><div class='icon-fb'></div></a>
             <a href="#" class="pull-left"><div class="icon-link"></div></a>
             <a href="#" class="pull-left"><div class="icon-google"></div></a>
