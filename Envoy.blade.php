@@ -15,6 +15,8 @@
     fi
     echo 'rsync command starting'
     rsync -v -az --no-o --no-g --no-p --delete \
+        --rsync-path="rsync" \
+        -e "ssh -p 7822" \
         --exclude ".env" \
         --exclude "/storage" \
         /home/projec64/deploy/ \
