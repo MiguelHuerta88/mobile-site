@@ -4,6 +4,13 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use App\Models\User;
+use App\Http\Requests\LoginRequest;
+use Auth;
+use URL;
+use Notification;
+use App\Models\Social;
+use Validator;
 
 class LoginController extends Controller
 {
@@ -35,5 +42,46 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    /**
+     * login function
+     * 
+     * @return view
+     */
+    public function login()
+    {
+        return view('admin.login');
+    }
+    
+    /**
+     * doLogin
+     * 
+     * @return view
+     */
+    public function doLogin(LoginRequest $request)
+    {
+        $input = $request->except('_token');
+        
+        // attempt to login
+        if(Auth::attempt($input)) {
+            return redirect()->route('admin.home');
+        }
+        // redirect them back
+        Notification::error('User not found.');
+        return redirect()->back()->withInput();
+    }
+    
+    /**
+     * logout function
+     * 
+     * @return view
+     */
+    public function logout()
+    {
+        Auth::logout();
+
+        // redirect them to our home page
+        return redirect()->route('site.home');
     }
 }

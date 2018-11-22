@@ -49,33 +49,30 @@ Route::get(
     '/admin',
     [
         'as' => 'admin.home',
-        'middleware' => 'admin',
         'uses' => 'AdminController@index'
     ]
-);
+)->middleware('admin');
 
 Route::get(
      'admin/edit/{type}',
      [
          'as' => 'admin.edit',
-         'middleware' => 'admin',
          'uses' => 'AdminController@edit'
      ]
-);
+)->middleware('admin');;
 
 Route::post(
     'admin/edit/submit',
     [
         'as' => 'admin.submit',
-        'middleware' => 'admin',
         'uses' => 'AdminController@postEdit'
     ]
-);
+)->middleware('admin');;
 
 Route::get(
     'admin/login',
     [
-        'uses' => 'Auth\AuthController@login',
+        'uses' => 'Auth\LoginController@login',
         'as' => 'login'
     ]
 );
@@ -83,7 +80,7 @@ Route::get(
 Route::post(
     'admin/login',
     [
-        'uses' => 'Auth\AuthController@doLogin',
+        'uses' => 'Auth\LoginController@doLogin',
         'as' => 'login'
     ]
 );
@@ -91,7 +88,7 @@ Route::post(
 Route::get(
     'admin/logout',
     [
-        'uses' => 'Auth\AuthController@logout',
+        'uses' => 'Auth\LoginController@logout',
         'as' => 'logout'
     ]
 );
