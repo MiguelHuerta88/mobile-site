@@ -2,23 +2,33 @@ READ ME
 
 Instructions to Deploy:
 
-1) sync over all files in mobile-site using Cyberduck to hosting server at /home/projec64/sync
+1) sync over all files in mobile-site using scp -P for port to hosting server at /home/projec64/sync
 2) ssh into server and run rsync to copy over file
 3) run npm commands and composer on deploy directory
 4) copy over all contents in deploy to html_plublic/
 
+1) scp -P 7822 -r ./* projec64@az1-ss13.a2hosting.com:/home/projec64/sync
+
 
 example rsync call
 
+1) 
+checkout master and run on teminal 
 rsync -v -az --no-o --no-g --no-p --delete \
     --rsync-path="rsync" \
-    -e "ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null" \
-    --exclude "deploy.sh" \
+    -e "ssh -p 7822" \
+    --exclude ".vagrant/" \
+    --exclude ".git/" \
+    --exclude ".gitignore/" \
     --exclude ".idea/" \
     --exclude ".vagrant/" \
+    --exclude "Vagrantfile" \
     --exclude ".env" \
     --exclude "puphpet/" \
     --exclude "vendor/" \
     ./ \
-    jenkins@$static_server:/var/www/deploy-int
-ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null \
+    projec64@az1-ss13.a2hosting.com:/home/projec64/sync
+
+2) copy over everything in /sync/ to /deploy/
+2) run gulp composer commands along with other artisan commands to prepare
+3) copy over everything in /
