@@ -2,9 +2,16 @@
 
 {{-- deploy task --}}
 @task('deploy', ['on' => 'production'])
+    echo "Begining to run Envoy script"
 	cd /home/projec64/deploy/
+
+    echo "Composer command starting:"
 	composer install --no-dev
+
+    echo "npm command starting"
 	npm install
+
+    echo "Running gulp"
     gulp --production --all
 
 	cd /home/projec64/public_html/
