@@ -186,12 +186,14 @@
 }
 @media screen and (min-width: 750px){
     .ad-slot-728-90{
-        display: block;
+        /*display: block;*/
+        display: none;
     }
 }
 @media screen and (max-width: 700px){
     .ad-slot-320-50, .ad-slot-320-250{
-        display: block;
+        /*display: block;*/
+        display: none;
     }
 }
 .slot-holder{
