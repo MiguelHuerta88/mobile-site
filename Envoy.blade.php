@@ -9,10 +9,10 @@
 	/opt/cpanel/composer/bin/composer install --no-dev
 
     echo "npm command starting"
-	npm install
+	/home/projec64/bin/npm install
 
     echo "Running gulp"
-    gulp --production --all
+    /home/projec64/bin/gulp --production --all
 
 	cd /home/projec64/public_html/
 	if [ -f ./artisan]
