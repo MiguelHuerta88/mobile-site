@@ -142,7 +142,7 @@
     font-family: "Nunito";
 }
 .background{
-    background: url("/images/ban_img.jpg");
+    background: url("../images/ban_img.jpg");
     /*background-repeat: no-repeat;*/
     height: 270px;
     width: 100%;
