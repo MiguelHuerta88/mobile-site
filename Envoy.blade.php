@@ -6,7 +6,7 @@
 	cd /home/projec64/deploy/
 
     echo "Composer command starting:"
-	composer install --no-dev
+	/opt/cpanel/composer/bin/composer install --no-dev
 
     echo "npm command starting"
 	npm install
