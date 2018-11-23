@@ -28,7 +28,7 @@ class Kernel extends ConsoleKernel
         //          ->hourly();
         $schedule->command('wordnik:word')
             ->dailyAt('03:05')
-            ->appendOutputTo(storage_path('/logs/wordnik.log'))
+            ->appendOutputTo(storage_path('/logs/wordnik.log'));
     }
 
     /**
