@@ -39,8 +39,9 @@ class LoginController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Social $socialModel)
     {
+        parent::__construct($socialModel);
         $this->middleware('guest')->except('logout');
     }
 

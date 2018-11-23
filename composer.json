@@ -10,7 +10,8 @@
         "laravel/framework": "5.6.*",
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "~5.0",
-        "edvinaskrucas/notification": "5.*"
+        "edvinaskrucas/notification": "5.*",
+        "guzzlehttp/guzzle": "~6.0"
     },
     "require-dev": {
         "filp/whoops": "^2.0",
