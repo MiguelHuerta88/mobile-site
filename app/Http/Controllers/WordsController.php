@@ -26,6 +26,8 @@ class WordsController extends Controller
         // @TODO next implementation
 
     	// return the response
-    	return response()->json($word);
+        // only return the column json_data
+        $data = ($word) ? $word->json_data : null;
+    	return response()->json($data);
     }
 }
