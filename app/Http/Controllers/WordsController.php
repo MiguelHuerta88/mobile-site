@@ -28,6 +28,8 @@ class WordsController extends Controller
     	// return the response
         // only return the column json_data
         $data = ($word) ? $word->json_data : null;
-    	return response()->json($data);
+
+        // removed the json response. Since json_data column is already json encoded
+    	return response($data);
     }
 }
