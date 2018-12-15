@@ -7,6 +7,7 @@ use Illuminate\Console\Command;
 use App\Http\Helpers\WebsterApi;
 use App\Http\Controllers\Gates\WordsGate;
 use App\Models\Words;
+use App\Models\WordLexiStats;
 
 
 
@@ -78,7 +79,7 @@ class PullWordOfDayCommand extends Command
 
         if ($wordOfDay) {
             // try to pull the definition from oxford
-            $response = $this->oxfordApi->callApi($wordOfDay);
+            $response = $this->oxfordApi->callApi('day-word', $wordOfDay);
 
             if ($response->success && $response->data) {
                 // build attributes
@@ -93,6 +94,27 @@ class PullWordOfDayCommand extends Command
                     $this->info("Successfully inserted word of the day into our database");
                 } else {
                     $this->error("We ran into some issues: " . $messages);
+                }
+
+                // next we try to pull the lexiStat for this word
+                $this->info("Going to try to pull lexiStats for {$wordOfDay}");
+
+                $response = $this->oxfordApi->callApi('lexi-stat', $wordOfDay);
+
+                if ($response->success && $response->data) {
+                    // build attributes
+                    $attributes = [
+                        'word_id' => $model->id,
+                        'json_data' => $response->data
+                    ];
+
+                    list($passed, $messages, $model) = $this->wordsGate->tryInsert($attributes, new WordLexiStats());
+
+                    if ($passed) {
+                        $this->info("Successfully inserted word lexi stat into our database");
+                    } else {
+                        $this->error("We ran into some issues: " . $messages);
+                    }
                 }
 
             } else {

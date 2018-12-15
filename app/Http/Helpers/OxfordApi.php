@@ -73,9 +73,16 @@ class OxfordApi
      *
      * @return Object
      */
-    public function callApi($word)
+    public function callApi($method = 'day-word', $word)
     {
-        $endpoint = env("OXFORD_URL") . "/entries/en/{$word}";
+        switch($method) {
+            case 'lexi-stat':
+                $endpoint = env("OXFORD_URL") . "/stats/frequency/word/en/?lemma={$word}";
+                break;
+            case 'day-word':
+                $endpoint = env("OXFORD_URL") . "/entries/en/{$word}/regions=us";
+            break;
+        }
 
         return $this->call($endpoint, "GET");
     }
