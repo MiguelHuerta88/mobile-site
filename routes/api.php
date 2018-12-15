@@ -14,3 +14,4 @@ use Illuminate\Http\Request;
 */
 
 Route::get('word-of-day/{date?}', 'WordsController@index');
+Route::get('lexi-stat/{date?}', 'WordsController@lexiStat');
