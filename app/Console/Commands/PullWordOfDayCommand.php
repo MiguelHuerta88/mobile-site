@@ -99,7 +99,10 @@ class PullWordOfDayCommand extends Command
                 // next we try to pull the lexiStat for this word
                 $this->info("Going to try to pull lexiStats for {$wordOfDay}");
 
-                $response = $this->oxfordApi->callApi('lexi-stat', $wordOfDay);
+                // before we enter we need to pull all lexicalCategories this word has associated with
+                $lexCategories = $this->oxfordApi->getLexicalCategoriesFromResponse($response->data);
+
+                $response = $this->oxfordApi->callApi('lexi-stat', $wordOfDay, $lexCategories);
 
                 if ($response->success && $response->data) {
                     // build attributes
