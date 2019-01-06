@@ -65,4 +65,15 @@ class WordLexiStats extends Model
         return $query->where('created_at', '>=', $start)
             ->where('created_at', '<=', $end);
     }
+
+    /**
+     * Scope by word id
+     * @param $query
+     * @param $id
+     * @return mixed
+     */
+    public function scopeByWordId($query, $id)
+    {
+        return $query->where('word_id', $id);
+    }
 }
