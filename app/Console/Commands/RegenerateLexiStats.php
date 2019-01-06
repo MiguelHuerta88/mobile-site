@@ -81,6 +81,11 @@ class RegenerateLexiStats extends Command
                     ];
 
                     list($passed, $message, $model) = $this->wordsGate->tryMassUpdate(WordLexiStats::byWordId($word->id), $attributes);
+                    if ($passed) {
+                        $this->info("\tUpdate for: {$word->word} successful");
+                    } else [
+                        $this->warn("\tUpdate for: {$word->word} did not complete");
+                    ]
                 }
             }
         });
